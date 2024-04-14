@@ -1,0 +1,7 @@
+1. BUG: After loading todos from ls -> new todos start from index 1 instead from the last index [X]
+2. FEATURES: 
+- Delete todos [X]
+- update index of todos after updating them [x]
+- Edit Todos [ ]
+- Group Todos [ ]
+- Prioritize Todos [ ] 
