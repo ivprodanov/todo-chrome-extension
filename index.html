@@ -4,17 +4,27 @@
     <title>Chrome-TODOs</title>
     <meta charset="utf-8">
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <style>
+
         html {
             width: 600px;
         }
+
         body {
             background-color: #333;
             font-family: sans-serif;
         }
-
+        h1{
+            font-family: 'Platypi';
+            background: -webkit-linear-gradient(#5761e7, #000202);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
         .main-container {
             display: flex;
             color: #333;
@@ -23,7 +33,8 @@
             flex-direction: column;
             align-items: center;
             border-radius: 10px;
-            background-color: #beb5b5;
+            background: rgb(230,76,146);
+            background: linear-gradient(58deg, rgba(230, 76, 145, 0.743) 35%, rgb(0, 213, 255) 100%);
             box-shadow: 0px 0px 25px rgb(255, 255, 255);
         }
 
@@ -44,12 +55,13 @@
 
         .todo-element {
             padding: 5px 20px;
-            background-color: rgb(19, 42, 71);
+            background-color: #046ee7;
             border-radius: 10px;
             color: white;
             border: 2px solid white; 
             overflow-wrap: break-word;
             cursor: pointer;
+            margin: 4px 10px;
         }
 
         .todo-element:hover {
@@ -65,39 +77,58 @@
         }
 
         .todo-list {
-            background-color: #133b6149;
+            width: 100%;
             margin-top: 10px;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
-            height: 200px;
+            min-height: 30px;
+            max-height: 250px;
             overflow:scroll;
             overflow-x:hidden;
             overflow-y: auto;
             max-width: 500px;
             box-shadow: 0px 0px 25px rgb(255, 255, 255);
+            padding: 20px;
+            background-color: white;
+        }
 
+        .check-todo {
+            float: right;
+            padding: 5px;
+            border-radius: 2px;
+            background-color: rgb(120, 165, 120);
+            color: white;
+            margin-right: 3px;
         }
 
         .finished {
             text-decoration: line-through;
-            background-color: rgb(15, 85, 15);
+            background-color: rgb(153, 188, 153);
         }
 
         .trash-emoji {
             float: right;
             background-color: rgba(208, 47, 47, 0.62);
-            padding: 3px;
-            border-radius: 10px;
+            padding: 5px;
+            border-radius: 2px;
+        }
+
+        .empty-text {
+            text-align: center;
+            font-style: italic;
+            color: #33333399;
         }
 
     </style>
     <div class="main-container">
+        <img src="./logo.png" alt="logo" height="150px">
         <h1>ChromeDOs</h1>
-        <h4>Chome extension TODO List</h4>
-        <button class="add-button" id="add-new-button">+ ADD NEW</button>
+        <div class="input-contianer">
+            <input type="text" id="todo-input">
+            <button id="add-new-button">ADD</button>
+        </div>
         <div class="todo-list">
-
         </div>
     </div>
 </body>
