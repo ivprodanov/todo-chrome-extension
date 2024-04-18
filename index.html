@@ -54,6 +54,9 @@
         }
 
         .todo-element {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             padding: 5px 20px;
             background-color: #046ee7;
             border-radius: 10px;
@@ -100,6 +103,7 @@
             background-color: rgb(120, 165, 120);
             color: white;
             margin-right: 3px;
+            margin-left: 3px;
         }
 
         .finished {
@@ -118,6 +122,42 @@
             text-align: center;
             font-style: italic;
             color: #33333399;
+        }
+
+        .todo-text {
+            overflow: auto;
+        }
+
+        .color-span {
+            display: block;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            margin: 2px;
+            background-color: #046ee7;
+        }
+
+        .color-chooser-span {
+            margin: 0 10px;
+        }
+        .colors-container {
+            display: flex;
+        }
+
+        .red {
+            background-color:rgb(208, 47, 47)
+        }
+
+        .yellow {
+            background-color:rgb(208, 184, 47)
+        }
+
+        .purple {
+            background-color:rgb(136, 47, 208)
+        }
+
+        .cyan {
+            background-color:rgb(208, 47, 146)
         }
 
     </style>
